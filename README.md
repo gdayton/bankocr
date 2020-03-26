@@ -2,6 +2,8 @@
 
 https://github.com/testdouble/contributing-tests/wiki/Bank-OCR-kata
 
+## 3 hour partial solution can be found on branch "3hr"
+
 ### General Overview
 
 The entry point for this application is in the App class.
