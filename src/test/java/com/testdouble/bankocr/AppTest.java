@@ -1,20 +1,41 @@
 package com.testdouble.bankocr;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
+import org.mockito.InjectMocks;
+import org.mockito.junit.MockitoJUnitRunner;
 
 /**
  * Unit test for simple App.
  */
+@RunWith(MockitoJUnitRunner.class)
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    @InjectMocks
+    BankOcr bankOcr;
+
+    @Mock
+    Entry entry;
+
+    @Mock
+    Digit digit;
+
+    @Captor
+    ArgumentCaptor<List<String>> stringCaptor;
+
+    @Before
+    public void setUp() {
+        bankOcr = BankOcr.getInstance();
     }
 }
