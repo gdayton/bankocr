@@ -10,6 +10,12 @@ package com.testdouble.bankocr;
  */
 public class App 
 {
+    /**
+     * Entrypoint for the application.
+     * 
+     * @param args Command line arguments (not used)
+     * @since 1.0
+     */
     public static void main( String[] args )
     {
         BankOcr bankOcr = BankOcr.getInstance();
