@@ -38,4 +38,26 @@ public class AppTest
     public void setUp() {
         bankOcr = BankOcr.getInstance();
     }
+
+    @Test
+    public void bankOcrInit_Default_ShouldReturnBankOcrObjectWithNoEntries()
+    {
+        assertTrue(bankOcr instanceof BankOcr);
+        assertEquals(bankOcr.entries().size(), 0);
+    }
+
+    @Test
+    public void bankOcrReadInFileNominal_NominalFilePath_ShouldReturnMixedEntries()
+    {
+        bankOcr.readInFile("entries/mixed");
+        
+        List<Entry> nominalEntries = bankOcr.entries();
+        assertEquals(nominalEntries.size(), 5);
+    }
+
+    @Test(expected = Exception.class)
+    public void bankOcrReadInFileOffNominal_OffNominalFilePath_ShouldThrowError()
+    {
+        bankOcr.readInFile("batman_was_here");
+    }
 }
