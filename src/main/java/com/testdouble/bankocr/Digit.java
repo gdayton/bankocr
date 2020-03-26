@@ -1,6 +1,6 @@
 package com.testdouble.bankocr;
 
-public class Digit
+public class Digit implements DigitInterface
 {
     private int digit;
 
@@ -18,5 +18,5 @@ public class Digit
     {
         return this.digit;
     }
-    
+
 }
