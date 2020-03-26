@@ -101,6 +101,44 @@ public class Entry implements EntryInterface
     }
 
     /**
+     * This method computes the checksum of the entry. 
+     * @return Returns the checksum of the entry, if the entry is invalid, -1 is returned
+     * @since 1.1
+     */
+    public int checksum()
+    {
+        if(this.isValid() && digits.size() == 9) {
+            int sum = 0;
+            sum +=  digits.get(8).getDigit() * 1;
+            sum +=  digits.get(7).getDigit() * 2;
+            sum +=  digits.get(6).getDigit() * 3;
+            sum +=  digits.get(5).getDigit() * 4;
+            sum +=  digits.get(4).getDigit() * 5;
+            sum +=  digits.get(3).getDigit() * 6;
+            sum +=  digits.get(2).getDigit() * 7;
+            sum +=  digits.get(1).getDigit() * 8;
+            sum +=  digits.get(0).getDigit() * 9;
+            return sum;
+        }
+
+        return -1;
+    }
+
+    /**
+     * This method calls the checksum method, but mods the result by 11. If it 
+     * equals 0, then its a valid checksum.
+     * @return true/false if it's a valid checksum.
+     * @since 1.1
+     */
+    public boolean validChecksum() 
+    {
+        int chk = checksum();
+
+        return chk % 11 == 0;
+    }
+
+
+    /**
      * This method iterates through all Digits and calls their toString() 
      * methods concatenating them into a final Entry string. If the String
      * contains an invalid Entry "ILL" is appended.
