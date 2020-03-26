@@ -1,6 +1,6 @@
 package com.testdouble.bankocr;
 
-public class Entry
+public class Entry implements EntryInterface
 {
     public Entry()
     {
@@ -11,4 +11,5 @@ public class Entry
     {
         return "";
     }
+    
 }
