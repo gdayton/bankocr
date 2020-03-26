@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.testdouble.bankocr.AppTest
+Test set: com.testdouble.bankocr.EntryTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.354 s - in com.testdouble.bankocr.AppTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.testdouble.bankocr.EntryTest

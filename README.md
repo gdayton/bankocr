@@ -32,7 +32,7 @@ Tests:
 
 ```
 mvn package
-...
+java -cp target/bank-ocr-1.0-SNAPSHOT.jar com.testdouble.bankocr.App
 ```
 
 #### Test
