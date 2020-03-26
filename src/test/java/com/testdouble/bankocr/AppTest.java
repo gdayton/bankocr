@@ -52,7 +52,7 @@ public class AppTest
         bankOcr.readInFile("entries/mixed");
         
         List<Entry> nominalEntries = bankOcr.entries();
-        assertEquals(nominalEntries.size(), 5);
+        assertEquals(nominalEntries.size(), 7);
     }
 
     @Test(expected = Exception.class)

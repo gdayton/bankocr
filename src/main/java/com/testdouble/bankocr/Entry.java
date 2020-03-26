@@ -152,7 +152,7 @@ public class Entry implements EntryInterface
             String s = "";
             for(Digit digit: digits)
                 s += digit.getDigit() != -1 ? digit.getDigit() : "?";
-            s+= isValid() ? "" : " ILL";
+            s+= isValid() ? (validChecksum() ? "" : " ERR") : " ILL";
             return s;
         }
         return "";

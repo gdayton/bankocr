@@ -5,6 +5,7 @@ import static org.mockito.Mockito.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -96,5 +97,16 @@ public class DigitTest
         int validResult = spyDigit.parseDigit(validDigitLines);
 
         assertEquals(validResult, 8);
+    }
+
+    @Test
+    public void possibleDigits_ValidFingerprint_ShouldReturnPossibleInts()
+    {
+        List<Integer> validFingerprint = new ArrayList<Integer>(Arrays.asList(2,5,8,9));
+        List<Integer> possibleDigits = validDigit.possibleDigits();
+        for(int digit: possibleDigits) 
+        {
+            System.out.println(digit);
+        }
     }
 }
